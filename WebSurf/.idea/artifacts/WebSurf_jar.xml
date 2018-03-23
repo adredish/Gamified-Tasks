@@ -1,9 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="WebSurf:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/WebSurf_jar</output-path>
-    <root id="archive" name="WebSurf.jar">
-      <element id="module-output" name="WebSurf" />
-      <element id="module-output" name="GamifiedComputationalPsychiatryModules" />
-    </root>
-  </artifact>
-</component>
