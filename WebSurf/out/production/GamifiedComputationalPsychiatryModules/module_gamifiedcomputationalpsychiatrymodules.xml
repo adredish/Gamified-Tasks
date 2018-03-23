@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_gamifiedcomputationalpsychiatrymodules" default="compile.module.gamifiedcomputationalpsychiatrymodules">
+  <dirname property="module.gamifiedcomputationalpsychiatrymodules.basedir" file="${ant.file.module_gamifiedcomputationalpsychiatrymodules}"/>
+  
+  <property name="module.jdk.home.gamifiedcomputationalpsychiatrymodules" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.gamifiedcomputationalpsychiatrymodules" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.gamifiedcomputationalpsychiatrymodules" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.gamifiedcomputationalpsychiatrymodules" value="-encoding UTF-8 -source 9 -target 9 ${compiler.args}"/>
+  
+  <property name="gamifiedcomputationalpsychiatrymodules.output.dir" value="${module.gamifiedcomputationalpsychiatrymodules.basedir}/../WebSurf/out/production/GamifiedComputationalPsychiatryModules"/>
+  <property name="gamifiedcomputationalpsychiatrymodules.testoutput.dir" value="${module.gamifiedcomputationalpsychiatrymodules.basedir}/../WebSurf/out/test/GamifiedComputationalPsychiatryModules"/>
+  
+  <path id="gamifiedcomputationalpsychiatrymodules.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="gamifiedcomputationalpsychiatrymodules.module.production.classpath">
+    <path refid="${module.jdk.classpath.gamifiedcomputationalpsychiatrymodules}"/>
+  </path>
+  
+  <path id="gamifiedcomputationalpsychiatrymodules.runtime.production.module.classpath">
+    <pathelement location="${gamifiedcomputationalpsychiatrymodules.output.dir}"/>
+  </path>
+  
+  <path id="gamifiedcomputationalpsychiatrymodules.module.classpath">
+    <path refid="${module.jdk.classpath.gamifiedcomputationalpsychiatrymodules}"/>
+    <pathelement location="${gamifiedcomputationalpsychiatrymodules.output.dir}"/>
+  </path>
+  
+  <path id="gamifiedcomputationalpsychiatrymodules.runtime.module.classpath">
+    <pathelement location="${gamifiedcomputationalpsychiatrymodules.testoutput.dir}"/>
+    <pathelement location="${gamifiedcomputationalpsychiatrymodules.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.gamifiedcomputationalpsychiatrymodules">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.gamifiedcomputationalpsychiatrymodules">
+    <patternset refid="excluded.from.module.gamifiedcomputationalpsychiatrymodules"/>
+  </patternset>
+  
+  <path id="gamifiedcomputationalpsychiatrymodules.module.sourcepath">
+    <dirset dir="${module.gamifiedcomputationalpsychiatrymodules.basedir}/../../java">
+      <include name="GamifiedComputationalPsychiatryModules"/>
+      <include name="GamifiedComputationalPsychiatryModules/CanvasToListPackage"/>
+      <include name="GamifiedComputationalPsychiatryModules/ClockTimerPackage"/>
+      <include name="GamifiedComputationalPsychiatryModules/CountDownDelayPackage"/>
+      <include name="GamifiedComputationalPsychiatryModules/DataFilePackage"/>
+      <include name="GamifiedComputationalPsychiatryModules/StringsFromFile"/>
+      <include name="GamifiedComputationalPsychiatryModules/TextScreenPackage"/>
+      <include name="GamifiedComputationalPsychiatryModules/RatingPackage"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.gamifiedcomputationalpsychiatrymodules" depends="compile.module.gamifiedcomputationalpsychiatrymodules.production,compile.module.gamifiedcomputationalpsychiatrymodules.tests" description="Compile module GamifiedComputationalPsychiatryModules"/>
+  
+  <target name="compile.module.gamifiedcomputationalpsychiatrymodules.production" depends="register.custom.compilers" description="Compile module GamifiedComputationalPsychiatryModules; production classes">
+    <mkdir dir="${gamifiedcomputationalpsychiatrymodules.output.dir}"/>
+    <javac2 destdir="${gamifiedcomputationalpsychiatrymodules.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.gamifiedcomputationalpsychiatrymodules}/javac">
+      <compilerarg line="${compiler.args.gamifiedcomputationalpsychiatrymodules}"/>
+      <bootclasspath refid="gamifiedcomputationalpsychiatrymodules.module.bootclasspath"/>
+      <classpath refid="gamifiedcomputationalpsychiatrymodules.module.production.classpath"/>
+      <src refid="gamifiedcomputationalpsychiatrymodules.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.gamifiedcomputationalpsychiatrymodules"/>
+    </javac2>
+    
+    <copy todir="${gamifiedcomputationalpsychiatrymodules.output.dir}">
+      <fileset dir="${module.gamifiedcomputationalpsychiatrymodules.basedir}">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.gamifiedcomputationalpsychiatrymodules.basedir}/CanvasToListPackage">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.gamifiedcomputationalpsychiatrymodules.basedir}/ClockTimerPackage">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.gamifiedcomputationalpsychiatrymodules.basedir}/CountDownDelayPackage">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.gamifiedcomputationalpsychiatrymodules.basedir}/DataFilePackage">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.gamifiedcomputationalpsychiatrymodules.basedir}/StringsFromFile">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.gamifiedcomputationalpsychiatrymodules.basedir}/TextScreenPackage">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.gamifiedcomputationalpsychiatrymodules.basedir}/RatingPackage">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.gamifiedcomputationalpsychiatrymodules.tests" depends="register.custom.compilers,compile.module.gamifiedcomputationalpsychiatrymodules.production" description="compile module GamifiedComputationalPsychiatryModules; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.gamifiedcomputationalpsychiatrymodules" description="cleanup module">
+    <delete dir="${gamifiedcomputationalpsychiatrymodules.output.dir}"/>
+    <delete dir="${gamifiedcomputationalpsychiatrymodules.testoutput.dir}"/>
+  </target>
+</project>
