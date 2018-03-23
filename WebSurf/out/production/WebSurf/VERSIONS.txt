@@ -1,3 +1,0 @@
-2017-11-03 V1.01
-- shuffle zones
-- removed ability to use keyboard to access buttons
