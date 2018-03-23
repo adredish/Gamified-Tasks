@@ -1,0 +1,8 @@
+%% splashText
+Each button will produce reward with some probability distribution.
+Buttons are different.
+-----
+
+%% closingText
+Thank you for playing the Gambling task.
+------

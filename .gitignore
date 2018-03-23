@@ -24,3 +24,6 @@ hs_err_pid*
 # developer files
 */.idea/
 */out/production/
+
+# output files
+__datafile.txt

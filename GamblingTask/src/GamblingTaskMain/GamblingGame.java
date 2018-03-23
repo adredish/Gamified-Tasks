@@ -33,7 +33,7 @@ public class GamblingGame extends Application {
     private static String callThus = "GamblingTaskMain.GamblingTask --config=cfgfile --output=datafile";
 
     // states
-    protected enum State {SPLASH, GAME, CLOSING};
+    protected enum State {SPLASH, GAME, CLOSING}
     private State curState;
     private Map<State, Group> myScenes;  // these are actually implemented as roots
     private Stage primaryStage;
@@ -55,8 +55,6 @@ public class GamblingGame extends Application {
         Parameters arguments = getParameters();
         Map<String,String> args = arguments.getNamed();
 
-        dataFile.writeFlag("VERSION", version);
-        dataFile.writeDate();
         fillParms();
 
         for (String k : args.keySet())
@@ -75,6 +73,8 @@ public class GamblingGame extends Application {
                     break;
             }
 
+        dataFile.writeFlag("VERSION", version);
+        dataFile.writeDate();
         parms.writeToDataFile(dataFile);
 
     }
