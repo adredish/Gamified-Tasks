@@ -1,0 +1,37 @@
+.root {
+}
+
+.button {
+    -fx-border-color: black;
+    -fx-background-color: lightblue;
+    -fx-font-size: 14pt;
+    -fx-border-radius: 5%;
+}
+
+.quitButton {
+    -fx-background-color: lightpink;
+}
+.optionButton {
+    -fx-font-size: 16pt;
+    -fx-background-color: wheat;
+    -fx-font-weight: bold;
+    -fx-border-color: red;
+    -fx-border-radius: 5%;
+}
+
+.title {
+    -fx-font-size: 18pt;
+    -fx-font-weight: bold;
+}
+
+.instructions {
+    -fx-font-size: 14pt;
+    -fx-font-family: serif;
+    -fx-border-style: solid;
+    -fx-border-width: 5pt;
+    -fx-border-color: darkblue;
+}
+
+.list-cell{
+    -fx-font-size:24.0;
+}

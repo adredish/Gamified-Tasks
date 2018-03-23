@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="DataFilePackage1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../GamifiedComputationalPsychiatryModules/DataFilePackage.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

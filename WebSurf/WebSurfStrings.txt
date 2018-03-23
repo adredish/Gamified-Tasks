@@ -1,0 +1,25 @@
+%% splashText
+The Web-Surf Task.
+-----
+
+%% practiceInstructionsText
+Video practice.
+You will now be given the opportunity to watch and rate videos from each category.
+Take note of the sequence of galleries that you are seeing.
+This is the same sequence you will see in the main game.
+-----
+
+%% instructionsText
+This is the Web-Surf game.
+First, please move the windows to a location so that you can see all the windows separately.
+Then, click OK to begin playing.
+-----
+
+%% rankingText
+Please rank the galleries from your most favorite.
+to your least favorite by clicking the buttons.
+-----
+
+%% closingText
+Thank you for playing.
+-----

@@ -1,0 +1,14 @@
+%% splashTEXT
+This is a test of splashText.
+-----
+
+%% junkTEXT
+Here is some
+junk text
+that has
+multiple lines.
+-----
+
+%% endTEXT
+Some ending text.
+-----

@@ -1,0 +1,18 @@
+.button {
+    -fx-border-color: black;
+    -fx-background-color: lightblue;
+    -fx-font-size: 14pt;
+    -fx-border-radius: 5%;
+}
+
+.choiceButton {
+    -fx-border-color: black;
+    -fx-background-color: orchid;
+    -fx-font-size: 14pt;
+    -fx-border-radius: 5%;
+}
+
+.title {
+    -fx-font-size: 18pt;
+    -fx-font-weight: bold;
+}
